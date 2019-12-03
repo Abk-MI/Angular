@@ -1,8 +1,19 @@
-<h2>users-list !</h2>
-<ul *ngFor="let user of users">
-    <li>{{user.id}}</li>
-    <li>{{user.firstName}}</li>
-    <li>{{user.lastName}}</li>
-    <li>{{user.email}}</li>
-    <li>{{user.age}}</li>
-</ul>
+<table>
+    <th colspan="7">users</th>
+    <tr>
+        <td>Id</td>        
+        <td>First Name</td>
+        <td>Last Name</td>       
+        <td class="absorbing-column">Email</td>
+        <td>Age</td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>        
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>       
+        <td class="absorbing-column">{{user.email}}</td>
+        <td>{{user.age}}</td>
+        <td><button>Modifier</button></td>
+        <td><button>Supprimer</button></td>
+    </tr>
+</table>
